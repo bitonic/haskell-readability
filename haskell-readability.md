@@ -7,7 +7,7 @@ introduction](http://v1v3kn.tumblr.com/post/18238156967/roll-your-own-autocomple
 to tries using Python. A while ago, I had implemented a [mini web
 server](https://github.com/rostayob/suggest) to do completion and
 correction of words using Ternary Search Tries in Haskell, and since
-the trie post generated a lot of interest I decided to post it.
+the trie post generated a lot of interest I decided to [post it](www.reddit.com/r/programming/comments/q5dz2/roll_your_own_fast_completion_and_correction/).
 
 Then, someone else posted a [blog
 article](http://www.reddit.com/r/programming/comments/q5dz2/roll_your_own_fast_completion_and_correction/c3v6ruo)
