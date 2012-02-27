@@ -111,8 +111,8 @@ empty = Trie Map.empty False
 insert []      (Trie m _) = Trie m True
 insert (c : w) (Trie m b) =
     case Map.lookup c m of
-        Nothing  -> insert (c : w) $ Trie (Map.insert c empty m) b
-        Just tr' -> Trie (Map.insert c (insert w tr') m) b
+        Nothing -> insert (c : w) $ Trie (Map.insert c empty m) b
+        Just tr -> Trie (Map.insert c (insert w tr) m) b
 
 find []      (Trie _ b) = b
 find (c : w) (Trie m _) = maybe False (find w) $ Map.lookup c m
