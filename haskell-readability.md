@@ -104,14 +104,11 @@ data Trie a = Trie (Map a (Trie a)) Bool
 empty :: Ord a => Trie a
 empty = Trie Map.empty False
 
-add :: Ord a => a -> Trie a -> Trie a
-add char (Trie m b) = Trie (Map.insert char empty m) b
-
 insert :: Ord a => [a] -> Trie a -> Trie a
 insert []      (Trie m _) = Trie m True
-insert (c : w) tr@(Trie m b) =
+insert (c : w) (Trie m b) =
     case Map.lookup c m of
-        Nothing  -> insert (c : w) $ add c tr
+        Nothing  -> insert (c : w) $ Trie (Map.insert c empty m) b
         Just tr' -> Trie (Map.insert c (insert w tr') m) b
 
 find :: Ord a => [a] -> Trie a -> Bool
