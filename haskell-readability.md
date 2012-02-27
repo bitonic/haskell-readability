@@ -124,3 +124,6 @@ complete (c : w) (Trie m _) =
 ```
 
 I didn't read the Python version too carefully so if I missed something let me know!
+
+You can discuss this post on
+[reddit](http://www.reddit.com/r/programming/comments/q80nh/haskell_python_and_readability/).
