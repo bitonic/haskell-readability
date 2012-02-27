@@ -6,14 +6,14 @@ someone posted a [nice
 introduction](http://v1v3kn.tumblr.com/post/18238156967/roll-your-own-autocomplete-solution-using-tries)
 to tries using Python. A while ago, I had implemented a [mini web
 server](https://github.com/rostayob/suggest) to do completion and
-correction using Ternary Search Tries in Haskell, and since the trie
-post generated a lot of interest I decided to post it.
+correction of words using Ternary Search Tries in Haskell, and since
+the trie post generated a lot of interest I decided to post it.
 
 Then, someone else posted a [blog
 article](http://www.reddit.com/r/programming/comments/q5dz2/roll_your_own_fast_completion_and_correction/c3v6ruo)
 commenting on the readability of Python and Haskell based on my web
 server code and the trie example, concluding that the Python version
-was way more readable.
+was much more readable.
 
 I personally prefer writing and reading Haskell, but I think that the
 comparison is not that fair to Haskell since the data structures
