@@ -67,12 +67,14 @@ class Trie(object):
             node = node.children[char]
         return node.value
 
-    def all_prefixes(self):
+    def all_prefixes(self, wlist):
         results = set()
         if self.flag:
             results.add(self.value)
         if not self.children: return results
-        return reduce(lambda a, b: a | b, [node.all_prefixes() for node in self.children.values()]) | results
+        return reduce(lambda a, b: a | b,
+                     [node.all_prefixes() for
+                      node in self.children.values()]) | results
 
     def autocomplete(self, prefix):
         node = self
