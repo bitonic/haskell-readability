@@ -124,3 +124,5 @@ complete []      (Trie m b) =
 complete (c : w) (Trie m _) =
     maybe [] (map (c :) . complete w) $ Map.lookup c m
 ```
+
+I didn't read the Python version too carefully so if I missed something let me know!
