@@ -89,7 +89,8 @@ And this is the Haskell version:
 
 ```haskell
 module Trie
-    ( empty
+    ( Trie
+    , empty
     , insert
     , find
     , complete

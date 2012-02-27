@@ -1,5 +1,6 @@
 module Trie 
-    ( empty
+    ( Trie
+    , empty
     , insert
     , find
     , complete
