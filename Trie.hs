@@ -9,7 +9,6 @@ import Data.Map (Map)
 import qualified Data.Map as Map
 
 data Trie a = Trie (Map a (Trie a)) Bool
-    deriving (Show)
 
 empty :: Ord a => Trie a
 empty = Trie Map.empty False
