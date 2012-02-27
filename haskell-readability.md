@@ -118,8 +118,7 @@ find []      (Trie _ b) = b
 find (c : w) (Trie m _) = maybe False (find w) $ Map.lookup c m
 
 complete []      (Trie m b) =
-    let h = if b then [[]] else []
-    in  h ++ concat [map (c :) (complete [] tr) | (c, tr) <- Map.toList m]
+    [[] | b] ++ concat [map (c :) (complete [] tr) | (c, tr) <- Map.toList m]
 complete (c : w) (Trie m _) =
     maybe [] (map (c :) . complete w) $ Map.lookup c m
 ```
